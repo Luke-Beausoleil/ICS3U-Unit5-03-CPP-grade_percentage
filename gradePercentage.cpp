@@ -8,6 +8,7 @@
 #include <string>
 
 int Percentage(std::string grade) {
+    // this function assigns level grades a percentage
     int mark;
     if (grade == "R") {
         mark = 24;
