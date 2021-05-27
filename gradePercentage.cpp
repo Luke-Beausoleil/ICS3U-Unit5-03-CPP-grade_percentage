@@ -11,23 +11,23 @@ int Percentage(std::string grade) {
     // this function assigns level grades a percentage
     int mark;
     if (grade == "R") {
-        mark = 24;
+        mark = 25;
     } else if (grade == "1-") {
         mark = 51;
     } else if (grade == "1") {
-        mark = 54;
+        mark = 55;
     } else if (grade == "1+") {
         mark = 58;
     } else if (grade == "2-") {
         mark = 61;
     } else if (grade == "2") {
-        mark = 64;
+        mark = 65;
     } else if (grade == "2+") {
         mark = 68;
     } else if (grade == "3-") {
         mark = 71;
     } else if (grade == "3") {
-        mark = 74;
+        mark = 75;
     } else if (grade == "3+") {
         mark = 78;
     } else if (grade == "4-") {
@@ -50,6 +50,10 @@ main() {
     std::cout << "Enter a level grade (i.e. R, 2, 3-, 4+, etc): ";
     std::cin >> grade;
     // call function
-    std::cout << "The middle mark is " << Percentage(grade) << "%\nDone."
-          << std::endl;
+    if (Percentage(grade) != -1) {
+        std::cout << "The middle mark is " << Percentage(grade) << "%\nDone."
+            << std::endl;
+    } else {
+        std::cout << "Invalid grade\nDone" << std::endl;
+    }
 }
